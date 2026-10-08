@@ -1,87 +1,88 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set "DESIGN_STUDIO=D:\Design_Studio"
+set "ROOT=D:\Design_Studio"
 
 echo.
 echo ========================================
-echo AI Video Creation Workflow
+echo Add Video to Design Studio
 echo ========================================
 echo.
 
 echo Step 1: Download inspiration video
-echo - Go to: https://www.pexels.com/videos/
-echo - Or: https://pixabay.com/videos/
-echo - Or: https://coverr.co/
+echo - Pexels: https://www.pexels.com/videos/
+echo - Pixabay: https://pixabay.com/videos/
+echo - Coverr: https://coverr.co/
 echo.
+
 set /p "VIDEO_FILE=Enter downloaded video name (example: inspiration.mp4): "
 set /p "VIDEO_PATH=Enter full path to video: "
 
 echo.
 echo Step 2: Watch video and take notes
-echo - Note colors, style, movement, story, mood
 echo.
-set /p "THEME=What is the theme? (example: nature, kids, fantasy): "
-set /p "STYLE=What is the style? (example: colorful, minimal, cartoon): "
-set /p "MOOD=What is the mood? (example: peaceful, energetic, magical): "
+
+set /p "THEME=What is the theme? (nature/kids/fantasy/other): "
+set /p "STYLE=What is the style? (colorful/minimal/cartoon/modern): "
+set /p "MOOD=What is the mood? (peaceful/energetic/magical/educational): "
 
 echo.
-echo Step 3: Create your prompt for AI
-echo Example: "A colorful animated kids story scene with smiling animals in a magical forest"
+echo Step 3: Create your unique prompt for AI
+echo Example: 'A colorful animated kids story with happy animals in nature'
 echo.
-set /p "YOUR_PROMPT=Enter your unique AI prompt: "
+
+set /p "YOUR_PROMPT=Enter your unique prompt: "
 
 echo.
 echo Step 4: Generate your own video
+echo - Runway ML: https://runwayml.com/
+echo - Midjourney: https://www.midjourney.com/
+echo - HeyGen: https://www.heygen.com/
 echo.
-echo Option 1: Runway ML
-echo Option 2: Midjourney
-echo Option 3: HeyGen
-echo Option 4: Use your own AI video tool
-echo.
-set /p "AI_TOOL=Which AI tool are you using? (Runway/Midjourney/HeyGen/Other): "
+
+set /p "AI_TOOL=Which AI tool did you use? (Runway/Midjourney/HeyGen/Other): "
 set /p "GENERATED_VIDEO=Enter generated video file name: "
 set /p "GENERATED_PATH=Enter path to generated video: "
 
 echo.
 echo Step 5: Save to Design Studio
 echo.
-mkdir "%DESIGN_STUDIO%\02_Design_Assets\Videos" 2>nul
 
-copy "%VIDEO_PATH%" "%DESIGN_STUDIO%\02_Design_Assets\Videos\Inspiration_%VIDEO_FILE%" 2>nul
-copy "%GENERATED_PATH%" "%DESIGN_STUDIO%\02_Design_Assets\Videos\Generated_%GENERATED_VIDEO%" 2>nul
+mkdir "%ROOT%\02_Design_Assets\Videos" 2>nul
 
-> "%DESIGN_STUDIO%\02_Design_Assets\Videos\Video_Info.txt" (
-echo Video Inspiration Notes
-echo =======================
+copy "%VIDEO_PATH%" "%ROOT%\02_Design_Assets\Videos\Inspiration_%VIDEO_FILE%" 2>nul
+copy "%GENERATED_PATH%" "%ROOT%\02_Design_Assets\Videos\Generated_%GENERATED_VIDEO%" 2>nul
+
+> "%ROOT%\02_Design_Assets\Videos\Video_Info_%GENERATED_VIDEO%.txt" (
+echo Video Project Information
+echo =========================
 echo.
 echo Inspiration Video: %VIDEO_FILE%
 echo Source: Pexels/Pixabay/Coverr
-
 echo.
-echo Theme: %THEME%
-echo Style: %STYLE%
-echo Mood: %MOOD%
+echo Analysis:
+echo - Theme: %THEME%
+echo - Style: %STYLE%
+echo - Mood: %MOOD%
 echo.
 echo Your Unique Prompt:
 echo %YOUR_PROMPT%
 echo.
 echo AI Tool Used: %AI_TOOL%
 echo Generated Video: %GENERATED_VIDEO%
-echo.
 echo Date Created: %date%
 )
 
 echo.
 echo ========================================
-echo Complete!
+echo Video Added Successfully!
 echo ========================================
 echo.
-echo Saved to: %DESIGN_STUDIO%\02_Design_Assets\Videos\
+echo Saved to: %ROOT%\02_Design_Assets\Videos\
 echo.
 echo Files:
 echo - Inspiration_%VIDEO_FILE%
 echo - Generated_%GENERATED_VIDEO%
-echo - Video_Info.txt
+echo - Video_Info_%GENERATED_VIDEO%.txt
 echo.
 pause

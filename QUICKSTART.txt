@@ -1,0 +1,110 @@
+KIDS BOOKS DESIGN STUDIO - QUICK START
+======================================
+
+Version: 2.0
+Date: 2024
+
+INSTALLATION
+===========
+
+1. Download all files from GitHub
+2. Run setup.bat
+3. Wait for folder creation (30 seconds)
+4. Done!
+
+STRUCTURE CREATED
+================
+
+D:\Design_Studio
+├── 01_Books (3 templates: Book_001, Book_002, Book_003)
+├── 02_Design_Assets (Backgrounds, Characters, Props, Patterns, Icons, Videos, Animations)
+├── 03_Themes (5 color themes)
+├── 04_Fonts (Typography guides)
+├── 05_Exports (PDF, JPG, PNG, Print-Ready, Videos)
+├── 06_Inspiration_Board (Notes, Screenshots, Moodboard)
+├── 07_Tracking (Project status)
+├── 08_Animations (Projects, Templates, Output)
+└── 09_Scripts (Python, Batch)
+
+QUICK COMMANDS
+==============
+
+1. Create new book:
+   double-click new-book.bat
+   enter book name
+   done!
+
+2. Add video:
+   double-click add-video-workflow.bat
+   follow steps 1-4
+   done!
+
+3. Create animation:
+   double-click auto-animation.bat
+   fill project details
+   done!
+
+4. All-in-one menu:
+   double-click all-in-one.bat
+   select option
+
+SOFTWARE NEEDED
+===============
+
+1. CorelDRAW 2022 (for design)
+2. Python 3.9+ (for animations)
+3. Fonts (Urdu + English)
+
+PYTHON SETUP
+============
+
+1. Install Python: https://www.python.org/downloads/
+2. Open Command Prompt
+3. Run: pip install manim pillow
+4. Done!
+
+FONTS TO INSTALL
+================
+
+Urdu:
+- Noto Nastaliq Urdu
+- Jameel Noori Nastaleeq
+- Urdu Typesetting
+
+English:
+- Poppins
+- Montserrat
+- Open Sans
+- Lato
+
+START WORKING
+=============
+
+1. Read README.txt
+2. Read SETUP_GUIDE.txt
+3. Read Design_Rules.txt
+4. Run new-book.bat
+5. Open CorelDRAW 2022
+6. Start designing!
+
+EXPORT OPTIONS
+===============
+
+- PDF: 300 DPI (print quality)
+- JPG: 300 DPI (web quality)
+- PNG: 300 DPI (with transparency)
+- Video: MP4 format (animations)
+
+FUTURE ADDITIONS
+================
+
+You can add:
+- More book projects (run new-book.bat)
+- Videos (run add-video-workflow.bat)
+- Animations (run auto-animation.bat)
+- Custom templates
+- New themes
+
+EVERYTHING IS READY TO USE!
+
+Happy Creating! 🎨📚🎬
